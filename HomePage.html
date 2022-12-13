@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/bd303dea31.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="notice">
+        <p>Dear Customers, owing to incessant rains, our deliveries might get delayed. Rest assured we are trying our
+            best to deliver your orders. We regret the inconvenience caused!</p>
+    </div>
+    <div id="head">
+        <p><i class="fa-solid fa-phone"></i> 1860 123 1000</p>
+        <p><i class="fa-solid fa-location-pin"></i>560004, Bangalore</p>
+        <p><i class="fa-solid fa-user"></i> Login/Sign Up</p>
+    </div>
+    <nav>
+        <div>
+            <img src="https://www.startupinsider.in/wp-content/uploads/2022/06/BigBasket-Logo.jpg" alt="Error 404">
+        </div>
+        <div id="search">
+            <input type="text" placeholder="Search for Products.." id="searchbar"><button id="btn"><i
+                    class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="basket">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <p>My Basket</p>
+            <span>
+                <p>0 items</p>
+            </span>
+        </div>
+    </nav>
+    <div class="sec">
+        <select id="category">
+            <option value="">SHOP BY CATEGORY</option>
+            <option value="">Fruits & Vegetables</option>
+            <option value="">Foodgrains,Oil & Masala</option>
+            <option value="">Bakery,Cakes & Dairy</option>
+            <option value="">2</option>
+            <option value="">2</option>
+            <option value="">4</option>
+            <option value="">5</option>
+            <option value="">8</option>
+            <option value="">465</option>
+            <option value="">542</option>
+            <option value="">78424</option>
+            <option value="">542</option>
+        </select>
+        <p><i class="fa-solid fa-tag"></i></p>
+        <p>OFFERS</p>
+    </div>
+    <div class="carasoul">
+        <div class="item" id="item1"><img
+                src="https://www.bigbasket.com/media/uploads/banner_images/YXHP144_hp_fom_m_bbpl-staples_460_121222_Bangalore.jpg"
+                alt="Error 404"></div>
+        <div class="item" id="item2"><img
+                src="https://www.bigbasket.com/media/uploads/banner_images/hp_m_Dairy_460px-011222.jpg" alt="Error 404">
+        </div>
+        <div class="item" id="item3"><img
+                src="https://www.bigbasket.com/media/uploads/banner_images/hp_m_GOURMETPL_SnackswithNoLimits_460px-011222.jpg"
+                alt="Error 404"></div>
+        <div class="item" id="item4"><img
+                src="https://www.bigbasket.com/media/uploads/banner_images/Cp_m_GM_EPBanner_460-051222.jpg"
+                alt="Error 404"></div>
+        <div class="item" id="item5"><img
+                src="https://www.bigbasket.com/media/uploads/banner_images/HP_EMF_M_WeekdayBangalore-1600x460-221212.jpeg"
+                alt="Error 404"></div>
+    </div>
+</body>
+<script>
+    let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("item");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+</html>
