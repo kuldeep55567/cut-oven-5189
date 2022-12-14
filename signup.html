@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        *{
+            background-color: #A0CD4A;
+        }
+#container{
+    border: 2px solid rgb(211, 203, 203);
+    width: 80%;
+    margin: auto;
+    display:flex;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    left: 8%;
+}
+.form-group{
+    padding-top: 10px;
+}
+h2{
+    position: relative;
+    right: 45px;
+    color: white;
+}
+#fname,#lname,#email,#pwd{
+    width: 60%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    background-color: rgb(211, 226, 171);
+}
+button{
+    background-color: #A0CD4A ;
+    border: none;
+    border-radius: 4px;
+    font-size: 24px;
+    margin-left: 30%;
+    background-color: rgb(211, 226, 171);
+}
+button:hover{
+    color: white;
+    cursor: pointer;
+}
+p{
+    font-size: 22px;
+    margin-left: 16%;
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+    <main>
+        <h2>Looks like you're new here!
+            Sign up with email and Get Started</h2>
+        <form role="form" onsubmit="signUp(event);" autocomplete="off">
+            <div class="form-group">
+                <input type="text" name="fname" id="fname" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="pwd" id="pwd" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+        <p>Already a member? <a href="/Login.html">Sign In</a></p>
+    </main>
+</div>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
