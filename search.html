@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sabji Mandi</title>
+  <script src="https://kit.fontawesome.com/bd303dea31.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+  <div id="notice">
+    <p>Dear Customers, owing to incessant rains, our deliveries might get delayed. Rest assured we are trying our
+        best to deliver your orders. We regret the inconvenience caused!</p>
+</div>
+<div id="parent">
+<div id="head">
+    <p><i class="fa-solid fa-phone"></i> 1860 123 1000</p>
+    <p><i class="fa-solid fa-location-pin"></i>560004, Bangalore</p>
+    <a href="./SignIn.html">
+        <p id="hname"><i class="fa-solid fa-user"></i>Login/Sign Up</p>
+    </a>
+</div>
+<nav>
+    <div>
+        <img src="https://www.startupinsider.in/wp-content/uploads/2022/06/BigBasket-Logo.jpg" alt="Error 404">
+    </div>
+    <div id="search">
+        <input type="text" placeholder="Search for Products.." id="searchbar"><button id="btn"><i
+                class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    <div class="basket">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <p>My Basket</p>
+        <span>
+            <p>0 items</p>
+        </span>
+    </div>
+</nav>
+<div class="sec">
+    <h5 id="fbtn">SHOP BY CATEGORY</h5>
+    <p><i class="fa-solid fa-tag"></i></p>
+    <p>OFFERS</p>
+</div>
+</div>
+<div id="scontainer">
+
+</div>
+</body>
+
+<script>
+  const product = [
+    {
+        id: 0,
+        image: 'https://www.bigbasket.com/media/uploads/p/s/241600_5-tata-salt-iodized.jpg',
+        type: 'grocery',
+        price: 24,
+        name:'Salt',
+    },
+    {
+        id: 1,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/30006783_9-catch-red-chilli-powder.jpg',
+        type: 'grocery',
+        price: 60,
+        name:'Red Chilli Powder',
+    },
+    {
+        id: 2,
+        image: 'https://www.bigbasket.com/media/uploads/p/s/10000909_8-fresho-chicken-curry-cut-without-skin-antibiotic-residue-free.jpg',
+        type: 'meat',
+        price: 230,
+        name:'Chicken Curry Cut',
+    },
+    {
+        id: 3,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/40036724_4-fresho-banana-stem-organically-grown.jpg',
+        type: 'vegetable',
+        price: 22,
+        name:'Banana Stem',
+        
+    },
+    {
+        id: 4,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/126906_8-aashirvaad-atta-whole-wheat.jpg',
+        type: 'grocery',
+        price: 340,
+        name:'Wheat Flour',
+        
+    },
+    {
+        id: 5,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/40202912_1-fresho-pumpkin-disco.jpg',
+        type: 'vegetable',
+        price: 29,
+        name:'Pumpkin',
+        
+    },
+    {
+        id: 6,
+        image: 'https://www.bigbasket.com/media/uploads/p/s/40118809_3-fresho-chilli-chicken-pieces-boneless-antibiotic-residue-free.jpg',
+        type: 'meat',
+        price: 309,
+        name:'Chicken Boneless',
+        
+    },
+    {
+        id: 7,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/40072464_15-bb-royal-organic-black-pepperkali-mirchi.jpg',
+        type: 'grocery',
+        price: 99,
+        name:'Black Pepper',
+        
+    },
+    {
+        id: 8,
+        image: 'https://www.bigbasket.com/media/uploads/p/s/40240479_4-fresho-tandoori-chicken-drumstick-fresh-juicy-marinated-ready-to-cook.jpg',
+        type: 'meat',
+        price: 129,
+        name:'Tandoori Chicken',
+        
+    },
+    {
+        id: 9,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/40023481_5-fresho-lemon-organically-grown.jpg',
+        type: 'vegetable',
+        price: 17,
+        name:'Lemon',
+        
+    },
+    {
+        id: 10,
+        image: 'https://www.bigbasket.com/media/uploads/p/s/40240469_4-fresho-peri-peri-basa-fish-steak-fresh-juicy-marinated-ready-to-cook.jpg',
+        type: 'meat',
+        price: 121,
+        name:'Peri-Peri Basa Fish',
+        
+    },
+    {
+        id: 11,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/100004165_3-everest-powder-turmeric.jpg',
+        type: 'grocery',
+        price: 89,
+        name:'Turmeric Powder',
+        
+    },
+    {
+        id: 12,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/10000094_15-fresho-colocasia.jpg',
+        type: 'vegetable',
+        price: 61,
+        name:'Colocasia',
+        
+    },
+    {
+        id: 13,
+        image: 'https://www.bigbasket.com/media/uploads/p/s/281204_9-fresho-farm-eggs-regular-medium-antibiotic-residue-free.jpg',
+        type: 'meat',
+        price: 100,
+        name:'Egg',
+        
+    },
+    {
+        id: 14,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/10000133_14-fresho-lettuce-iceberg.jpg',
+        type: 'vegetable',
+        price: 21,
+        name:'Lettuce',
+        
+    },
+    {
+        id: 15,
+        image: 'https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg',
+        type: 'vegetable',
+        price: 30,
+        name:'Cauli Flower',
+        
+    },
+    {
+        id: 16,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/40250798_1-fresho-crispy-fish-finger-crunchy-outside-juicy-inside-with-natural-ingredients-no-preservatives.jpg',
+        type: 'meat',
+        price: 229,
+        name:'Fish Finger',
+        
+    },
+    {
+        id: 17,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/252429_7-grb-ghee.jpg',
+        type: 'grocery',
+        price: 384,
+        name:'Ghee/Tuppa',
+        
+    },
+    {
+        id: 18,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/40183511_1-bb-royal-garam-masala.jpg',
+        type: 'grocery',
+        price: 54,
+        name:'Garam Masala',
+        
+    },
+    {
+        id: 19,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/40250799_1-fresho-crispy-fish-fillet-crunchy-outside-juicy-inside-with-natural-ingredients-no-preservatives.jpg',
+        type: 'meat',
+        price: 399,
+        name:'Crispy Fish Fillet',
+        
+    },
+    {
+        id: 20,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/40124625_1-fresho-capsicum-red-organically-grown.jpg',
+        type: 'vegetable',
+        price: 27,
+        name:'Capsicum',
+        
+    },
+    {
+        id: 21,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/40023472_5-fresho-onion-organically-grown.jpg',
+        type: 'vegetable',
+        price: 40,
+        name:'Onion',
+        
+    },
+    {
+        id: 22,
+        image: 'https://www.bigbasket.com/media/uploads/p/s/40231692_2-fresho-chicken-malai-tikka-juicy-fresh.jpg',
+        type: 'meat',
+        price: 299,
+        name:'Chicken Malai Tikka',
+        
+    },
+    {
+        id: 23,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/100005557_2-weikfield-cornflour.jpg',
+        type: 'grocery',
+        price: 85,
+        name:'Corn Flour',
+        
+    },
+    {
+        id: 24,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/40227232_1-el-dina-chicken-meat-loaf-original-gluten-free.jpg',
+        type: 'meat',
+        price: 475,
+        name:'Chicken Meat Loaf',
+        
+    },
+    {
+        id: 25,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/10000071_14-fresho-carrot-orange.jpg',
+        type: 'vegetable',
+        price: 30,
+        name:'Carrot',
+        
+    },
+    {
+        id: 26,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/40250802_1-fresho-breaded-torpedo-prawns-crunchy-outside-juicy-inside-with-natural-ingredients-no-preservatives.jpg',
+        type: 'meat',
+        price: 399,
+        name:'Breaded Torpedo Prowns',
+        
+    },
+    {
+        id: 27,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/100647221_11-fortune-rice-bran-oil.jpg',
+        type: 'grocery',
+        price: 167,
+        name:'Rice Bran Oil',
+        
+    },
+    {
+        id: 28,
+        image: 'https://www.bigbasket.com/media/uploads/p/mm/276756_8-fortune-fortune-premium-kachi-ghani-pure-mustard-oil.jpg',
+        type: 'grocery',
+        price: 171,
+        name:'Mustard Oil',
+        
+    },
+    {
+        id: 29,
+        image: 'https://www.bigbasket.com/media/uploads/p/s/10000054_17-fresho-brinjal-bottle-shape.jpg',
+        type: 'vegetable',
+        price: 17,
+        name:'Brinjal',
+        
+    }
+];
+const categories = [...new Set(product.map((item)=>
+    {return item}))]
+    let i=0;
+document.getElementById('scontainer').innerHTML = categories.map((item)=>
+{
+    var {image,price,name} = item;
+    return(
+        `<div class='box'>
+            <div class='img-box'>
+                <img class='images' src=${image}></img>
+            </div>
+        <div class='bottom'>
+        <p>${name}</p>
+        <h2>₹ ${price}.00</h2>`+
+        "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
+        `</div>
+        </div>`
+    )
+}).join('')
+
+</script>
+
+</html>
