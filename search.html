@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="Style.css">
 </head>
 
-<body>
+<body style="background-color:#A0CD4A;">
   <div id="notice">
     <p>Dear Customers, owing to incessant rains, our deliveries might get delayed. Rest assured we are trying our
         best to deliver your orders. We regret the inconvenience caused!</p>
@@ -29,15 +29,21 @@
                 class="fa-solid fa-magnifying-glass"></i></button>
     </div>
     <div class="basket">
-        <i class="fa-solid fa-basket-shopping"></i>
-        <p>My Basket</p>
-        <span>
-            <p>0 items</p>
-        </span>
+        <a href="cart.html"><i class="fa-solid fa-basket-shopping"></i>
+            <p>My Basket</p>
+            <span id="cart-total">0
+                 </span></a>
+        
     </div>
 </nav>
 <div class="sec">
-    <h5 id="fbtn">SHOP BY CATEGORY</h5>
+    <select id="filter">
+        <option value="">SHOP BY CATEGORY</option>
+        <option value="">vegetable</option>
+        <option value="">fruits</option>
+        <option value="">grocery</option>
+        <option value="">meat</option>
+    </select>
     <p><i class="fa-solid fa-tag"></i></p>
     <p>OFFERS</p>
 </div>
@@ -45,37 +51,41 @@
 <div id="scontainer">
 
 </div>
+<div id="footbtn">
+    <button>SEE MORE ></button>
+</div>
+
 </body>
 
 <script>
-  const product = [
+  let product = [
     {
         id: 0,
         image: 'https://www.bigbasket.com/media/uploads/p/s/241600_5-tata-salt-iodized.jpg',
         type: 'grocery',
         price: 24,
-        name:'Salt',
+        name:'Salt - 1 kg'
     },
     {
         id: 1,
         image: 'https://www.bigbasket.com/media/uploads/p/mm/30006783_9-catch-red-chilli-powder.jpg',
         type: 'grocery',
         price: 60,
-        name:'Red Chilli Powder',
+        name:'Red Chilli Powder - 100 g'
     },
     {
         id: 2,
         image: 'https://www.bigbasket.com/media/uploads/p/s/10000909_8-fresho-chicken-curry-cut-without-skin-antibiotic-residue-free.jpg',
         type: 'meat',
         price: 230,
-        name:'Chicken Curry Cut',
+        name:'Chicken Curry Cut - 500 g'
     },
     {
         id: 3,
         image: 'https://www.bigbasket.com/media/uploads/p/mm/40036724_4-fresho-banana-stem-organically-grown.jpg',
         type: 'vegetable',
         price: 22,
-        name:'Banana Stem',
+        name:'Banana Stem - 1 pc'
         
     },
     {
@@ -83,7 +93,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/126906_8-aashirvaad-atta-whole-wheat.jpg',
         type: 'grocery',
         price: 340,
-        name:'Wheat Flour',
+        name:'Wheat Flour - 10 kg'
         
     },
     {
@@ -91,7 +101,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/40202912_1-fresho-pumpkin-disco.jpg',
         type: 'vegetable',
         price: 29,
-        name:'Pumpkin',
+        name:'Pumpkin - 250 g'
         
     },
     {
@@ -99,7 +109,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/s/40118809_3-fresho-chilli-chicken-pieces-boneless-antibiotic-residue-free.jpg',
         type: 'meat',
         price: 309,
-        name:'Chicken Boneless',
+        name:'Chicken Boneless - 500 g'
         
     },
     {
@@ -107,7 +117,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/40072464_15-bb-royal-organic-black-pepperkali-mirchi.jpg',
         type: 'grocery',
         price: 99,
-        name:'Black Pepper',
+        name:'Black Pepper - 100 g'
         
     },
     {
@@ -115,7 +125,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/s/40240479_4-fresho-tandoori-chicken-drumstick-fresh-juicy-marinated-ready-to-cook.jpg',
         type: 'meat',
         price: 129,
-        name:'Tandoori Chicken',
+        name:'Tandoori Chicken - 200 g'
         
     },
     {
@@ -123,7 +133,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/40023481_5-fresho-lemon-organically-grown.jpg',
         type: 'vegetable',
         price: 17,
-        name:'Lemon',
+        name:'Lemon - 4 pc'
         
     },
     {
@@ -131,7 +141,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/s/40240469_4-fresho-peri-peri-basa-fish-steak-fresh-juicy-marinated-ready-to-cook.jpg',
         type: 'meat',
         price: 121,
-        name:'Peri-Peri Basa Fish',
+        name:'Peri-Peri Basa Fish - 250 g'
         
     },
     {
@@ -139,7 +149,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/100004165_3-everest-powder-turmeric.jpg',
         type: 'grocery',
         price: 89,
-        name:'Turmeric Powder',
+        name:'Turmeric Powder - 200 g'
         
     },
     {
@@ -147,7 +157,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/10000094_15-fresho-colocasia.jpg',
         type: 'vegetable',
         price: 61,
-        name:'Colocasia',
+        name:'Colocasia - 1 kg'
         
     },
     {
@@ -155,7 +165,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/s/281204_9-fresho-farm-eggs-regular-medium-antibiotic-residue-free.jpg',
         type: 'meat',
         price: 100,
-        name:'Egg',
+        name:'Egg - 1 dozen'
         
     },
     {
@@ -163,7 +173,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/10000133_14-fresho-lettuce-iceberg.jpg',
         type: 'vegetable',
         price: 21,
-        name:'Lettuce',
+        name:'Lettuce - 1 pc'
         
     },
     {
@@ -171,7 +181,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg',
         type: 'vegetable',
         price: 30,
-        name:'Cauli Flower',
+        name:'Cauli Flower - 1 pc'
         
     },
     {
@@ -179,7 +189,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/40250798_1-fresho-crispy-fish-finger-crunchy-outside-juicy-inside-with-natural-ingredients-no-preservatives.jpg',
         type: 'meat',
         price: 229,
-        name:'Fish Finger',
+        name:'Fish Finger - 500 g'
         
     },
     {
@@ -187,7 +197,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/252429_7-grb-ghee.jpg',
         type: 'grocery',
         price: 384,
-        name:'Ghee/Tuppa',
+        name:'Ghee/Tuppa - 500 g'
         
     },
     {
@@ -195,7 +205,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/40183511_1-bb-royal-garam-masala.jpg',
         type: 'grocery',
         price: 54,
-        name:'Garam Masala',
+        name:'Garam Masala - 100 g'
         
     },
     {
@@ -203,7 +213,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/40250799_1-fresho-crispy-fish-fillet-crunchy-outside-juicy-inside-with-natural-ingredients-no-preservatives.jpg',
         type: 'meat',
         price: 399,
-        name:'Crispy Fish Fillet',
+        name:'Crispy Fish Fillet - 4 pc'
         
     },
     {
@@ -211,7 +221,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/40124625_1-fresho-capsicum-red-organically-grown.jpg',
         type: 'vegetable',
         price: 27,
-        name:'Capsicum',
+        name:'Capsicum - 500 g'
         
     },
     {
@@ -219,7 +229,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/40023472_5-fresho-onion-organically-grown.jpg',
         type: 'vegetable',
         price: 40,
-        name:'Onion',
+        name:'Onion - 1 kg'
         
     },
     {
@@ -227,7 +237,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/s/40231692_2-fresho-chicken-malai-tikka-juicy-fresh.jpg',
         type: 'meat',
         price: 299,
-        name:'Chicken Malai Tikka',
+        name:'Chicken Malai Tikka - 400 g'
         
     },
     {
@@ -235,7 +245,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/100005557_2-weikfield-cornflour.jpg',
         type: 'grocery',
         price: 85,
-        name:'Corn Flour',
+        name:'Corn Flour - 250 g'
         
     },
     {
@@ -243,7 +253,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/40227232_1-el-dina-chicken-meat-loaf-original-gluten-free.jpg',
         type: 'meat',
         price: 475,
-        name:'Chicken Meat Loaf',
+        name:'Chicken Meat Loaf - 500 g'
         
     },
     {
@@ -251,7 +261,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/10000071_14-fresho-carrot-orange.jpg',
         type: 'vegetable',
         price: 30,
-        name:'Carrot',
+        name:'Carrot - 1 kg'
         
     },
     {
@@ -259,7 +269,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/40250802_1-fresho-breaded-torpedo-prawns-crunchy-outside-juicy-inside-with-natural-ingredients-no-preservatives.jpg',
         type: 'meat',
         price: 399,
-        name:'Breaded Torpedo Prowns',
+        name:'Torpedo Prowns - 500 g'
         
     },
     {
@@ -267,7 +277,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/100647221_11-fortune-rice-bran-oil.jpg',
         type: 'grocery',
         price: 167,
-        name:'Rice Bran Oil',
+        name:'Rice Bran Oil - 1 ltr'
         
     },
     {
@@ -275,7 +285,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/mm/276756_8-fortune-fortune-premium-kachi-ghani-pure-mustard-oil.jpg',
         type: 'grocery',
         price: 171,
-        name:'Mustard Oil',
+        name:'Mustard Oil - 1 ltr'
         
     },
     {
@@ -283,30 +293,63 @@
         image: 'https://www.bigbasket.com/media/uploads/p/s/10000054_17-fresho-brinjal-bottle-shape.jpg',
         type: 'vegetable',
         price: 17,
-        name:'Brinjal',
+        name:'Brinjal - 1 pc'
         
     }
 ];
-const categories = [...new Set(product.map((item)=>
-    {return item}))]
-    let i=0;
-document.getElementById('scontainer').innerHTML = categories.map((item)=>
-{
-    var {image,price,name} = item;
-    return(
-        `<div class='box'>
-            <div class='img-box'>
-                <img class='images' src=${image}></img>
-            </div>
-        <div class='bottom'>
-        <p>${name}</p>
-        <h2>₹ ${price}.00</h2>`+
-        "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
-        `</div>
-        </div>`
-    )
-}).join('')
 
+let filterSelect = document.getElementById("filter");
+filterSelect.addEventListener("change", () => {
+    let filtered =product.filter((e,i)=>{
+        if(e.type === filterSelect.value){
+         return true;
+        }else{
+            return false;
+        }
+    })
+     
+    display(filtered);
+  })
+let container = document.getElementById("scontainer")
+function display(){
+    container.innerHTML = null;
+    product.forEach((element)=>{
+        let card = document.createElement("div");
+        card.setAttribute("class","card");
+        let image = document.createElement("img");
+        image.setAttribute("src",element.image);
+        let name = document.createElement("h3");
+        name.innerText = element.name;
+        let price = document.createElement("h3");
+        price.innerText = "₹ "+element.price;
+        let button = document.createElement("button");
+        button.setAttribute("class","footbtn")
+        button.innerText = "Add To Cart";
+        button.addEventListener("click",()=>{
+let cartData = JSON.parse(localStorage.getItem("cart"));
+let total = document.getElementById("cart-total")
+if(cartData === null) cartData = [];
+let alreadyinCart = false;
+for(let i=0;i<cartData.length;i++){
+  if(cartData[i].id===element.id){
+alreadyinCart = true;
+break;
+  };
+}if(alreadyinCart===true){
+  alert("Product is Already in the Cart");
+
+}else{
+  cartData.push({...element});
+localStorage.setItem("cart",JSON.stringify(cartData));
+alert("Product Added To Cart");
+total.innerText = cartData.length;
+}
+
+})
+        card.append(image,name,price,button);
+        container.append(card);
+    })
+}
+display(product);
 </script>
-
 </html>

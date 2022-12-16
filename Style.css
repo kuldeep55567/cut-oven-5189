@@ -296,16 +296,60 @@ width: 100%;
     text-align: right;
 }
 #scontainer{
-    border: 2px solid red;
     display: grid;
     width: 80%;
     margin: auto;
     grid-template-columns: repeat(3,1fr);
+    background-color: whitesmoke;
 
 }
 .box{
-    border: 2px solid blue;
+margin: 10px;
+box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+border-radius: 10px;
 }
 #scontainer img{
     width:60%;
+    border: 1px ridge;
+    margin-left: 18%;
+}
+#filter{
+    font-size: 15px;
+    font-weight: 700;
+    border-color: #A0CD4A;
+    background-color: #A0CD4A;
+    color: whitesmoke;
+}
+#filter option{
+   font-size: 17px;
+   background-color: whitesmoke;
+   color: #A0CD4A;
+}
+.footbtn,#footbtn button{
+font-size: 18px;
+background-color: #A0CD4A;
+color: whitesmoke;
+border-radius: 5px;
+border: none;
+padding: 5px;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.card{
+    text-align: center;
+    margin-top: 20px;
+    margin-inline: 10px;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+#footbtn{
+    text-align: center;
+    margin-top: 30px;
+    
+}
+.footbtn:hover{
+    cursor: pointer;
+    color: #A0CD4A;
+    background-color: whitesmoke;
 }
