@@ -8,8 +8,8 @@ function showSlides() {
     slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  slides[slideIndex - 1].style.display = "block";
   setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 let slideindex = 0;
@@ -22,7 +22,11 @@ function showSlide() {
     slides[i].style.display = "none";
   }
   slideindex++;
-  if (slideindex > slides.length) {slideindex = 1}
-  slides[slideindex-1].style.display = "block";
+  if (slideindex > slides.length) { slideindex = 1 }
+  slides[slideindex - 1].style.display = "block";
   setTimeout(showSlide, 4000); // Change image every 4 seconds
 }
+let btn = document.getElementById("fbtn");
+btn.addEventListener("click",()=>{
+  location.href = "search.html"
+})

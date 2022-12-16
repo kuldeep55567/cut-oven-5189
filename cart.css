@@ -1,0 +1,100 @@
+*{padding:0; margin:0; box-sizing: border-box; font-family:sans-serif;}
+header{
+	width: 100vw;
+	min-height: 100vh;
+	background: #34495e;
+	font-size: 1.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container{
+	background: white;
+	max-width: 600px;
+	min-height: 600px;
+	display: flex;
+    width: 80%;
+	justify-content:space-between;
+	align-items: flex-start;
+	padding: 0.5rem 1.5rem;
+    margin: auto;
+}
+.left{
+	flex-basis: 50%;
+}
+.right{
+	flex-basis: 50%;
+}
+form{
+	padding: 1rem;
+    font-size: 22px;
+}
+
+h3{
+	margin-top: 1rem;
+	color:#2c3e50;
+	}
+
+form input[type="text"]{
+	width: 100%;
+	padding: 0.5rem 0.7rem;
+	margin: 0.5rem 0;
+	outline: none;
+    font-size: 25px;
+}
+
+#zip{
+	display: flex;
+	margin-top: 0.5rem;
+    font-size: 22px;
+}
+#zip select{
+	padding: 0.5rem 0.7rem;
+    font-size: 20px;
+}
+#zip input[type="number"]{
+	padding: 0.5rem 0.7rem;
+	margin-left: 5px;
+    font-size: 20px;	
+}
+input[type="submit"]{
+	width: 70%;
+	padding: 0.7rem 1.5rem;
+	background: #34495e;
+	color: white;
+	border: none;
+	outline: none;
+	margin-top: 1rem;
+	cursor: pointer;
+    font-size: 20px;
+    margin-left: 65px;
+
+}
+
+input[type="submit"]:hover{
+	background: #2c3e50;
+}
+
+
+@media only screen and (max-width: 3000px){
+	.container{
+		flex-direction: column;
+	}
+	body{
+		overflow-x: hidden;
+	}
+}
+.card{
+    border: 3px solid green;
+    max-height: 300px;
+}
+#parent1{
+    display: flex;
+}
+#cart-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 0px;
+    border: 3px solid red;
+
+}

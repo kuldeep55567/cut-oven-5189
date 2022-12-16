@@ -10,14 +10,8 @@
 <body>
     <div id="container">
     <main>
-        <h2>Sign Up here..</h2>
-        <form role="form" onsubmit="signUp(event);" autocomplete="off">
-            <div class="form-group">
-                <input type="text" name="fname" id="fname" placeholder="First Name" required>
-            </div>
-            <div class="form-group">
-                <input type="text" name="lname" id="lname" placeholder="Last Name" required>
-            </div>
+        <h2>Log In User..</h2>
+        <form role="form" onsubmit="signIn(event);" autocomplete="off">
             <div class="form-group">
                 <input type="email" name="email" id="email" placeholder="Email Address" required>
             </div>
@@ -25,10 +19,10 @@
                 <input type="password" name="pwd" id="pwd" placeholder="Password" required>
             </div>
             <div class="form-group">
-                <button type="submit">Sign Up</button>
+                <button type="submit">Sign In</button>
             </div>
         </form>
-        <p>Already a member? <a href="/signin.html">Sign In</a></p>
+        <p>Don't have an account? <a href="/signup.html">Sign Up</a> here</p>
     </main>
 </div>
     <script type="text/javascript" src="./script.js"></script>
