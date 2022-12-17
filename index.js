@@ -30,3 +30,9 @@ let btn = document.getElementById("fbtn");
 btn.addEventListener("click",()=>{
   location.href = "search.html"
 })
+let formData = JSON.parse(localStorage.getItem('formData')) || []
+formData.forEach((element)=>{
+  let ename = document.getElementById("hname");
+  ename.innerText ="Hello ," + element.fname;
+  ename.style.marginTop = "5px"
+})
