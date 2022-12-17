@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@ p{
 }
 #container{
     margin: auto;
-    border: 10px ridge greenyellow;
+    border: 10px ridge ;
     border-radius: 15px;
     width: 420px;
 
@@ -29,21 +30,13 @@ button{
     cursor: pointer;
     border-radius: 4px;
 }
-
-html{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
 body{
     background: #9fcd4a70;
     display: flex;
     flex-flow: column;
     height: 100vh;
     caret-color: #A0CD4A;
-    caret-shape:;
 }
-
-
 main{
     flex:1;
     margin: 20px 5px;
@@ -56,4 +49,11 @@ input {
     font-family: monospace;
     font-size: 25px; 
     color: #A0CD4A;
+    }
+    #parent img{
+        width: 200px;
+        max-height: 250px;
+    }
+    #container h2{
+        color: grey;
     }

@@ -25,7 +25,7 @@
           </div>
           <nav>
             <img src="https://pristineorganics.com/wp-content/uploads/2019/06/bigbasket-logo-png-300x200.png" alt="" style="width: 150px;">
-            <h1 style="font-size: 50px; color: grey;margin-left: 20%;margin-top: 20px;">Proceed to Checkout..</h1>
+            <h1 id="total" class="headt">Your Payable Amout is:- ₹ <span id="cart-total">0</span></h1>
           </nav>
           </div>
     </div>
@@ -33,7 +33,6 @@
         <div id="cart-container">
             <!-- Here Append All the cart Products  -->
         </div>
-
         <div class="container">
             <div class="left">
                 <h3>BILLING ADDRESS</h3>
@@ -100,6 +99,7 @@
             </div>
         </div>
     </div>
+    <p style="color:black; background-color: rgb(240, 228, 215); padding-left: 100px; margin-top: 40px;">Copyright © 2022-2033 Masai Grocery Supplies Pvt Ltd</p>
 </body>
 <script>
      let container = document.getElementById("cart-container");
@@ -112,8 +112,9 @@
 
   function display(data) {
     container.innerHTML = null;
-    data.forEach((element) => {
+    data.forEach((element,i) => {
       let card = document.createElement("div");
+      let total  = document.getElementById("cart-total")
       card.setAttribute("class","card")
       let image = document.createElement("img");
       image.setAttribute("src", element.image);
@@ -124,7 +125,7 @@
       let increment = document.createElement("button");
       increment.innerText = "+";
       let quantity = document.createElement("span");
-      quantity.innerText = 0
+      quantity.innerText = 1
       let decrement = document.createElement("button");
       decrement.innerText = "-";
       let remove = document.createElement("button");
@@ -142,6 +143,12 @@
       for (let i = 0; i < cartData.length; i++) {
         sum += count * cartData[i].price;
       }
+total.innerText = sum
+remove.addEventListener("click",()=>{
+    cartData.splice(i,1);
+    localStorage.setItem("cart",JSON.stringify(cartData));
+    display(cartData);
+})
       card.append(image,name,price,increment,quantity,decrement,remove);
       container.append(card);
     });

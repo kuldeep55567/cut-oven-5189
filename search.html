@@ -54,7 +54,7 @@
 <div id="footbtn">
     <button>SEE MORE ></button>
 </div>
-
+<p style="color:black; background-color: rgb(240, 228, 215); padding-left: 100px; margin-top: 40px;">Copyright © 2022-2033 Masai Grocery Supplies Pvt Ltd</p>
 </body>
 
 <script>
@@ -237,7 +237,7 @@
         image: 'https://www.bigbasket.com/media/uploads/p/s/40231692_2-fresho-chicken-malai-tikka-juicy-fresh.jpg',
         type: 'meat',
         price: 299,
-        name:'Chicken Malai Tikka - 400 g'
+        name:'Chicken Tikka - 400 g'
         
     },
     {
@@ -297,10 +297,9 @@
         
     }
 ];
-
 let filterSelect = document.getElementById("filter");
 filterSelect.addEventListener("change", () => {
-    let filtered =product.filter((e,i)=>{
+    let filtered = product.filter((e,i)=>{
         if(e.type === filterSelect.value){
          return true;
         }else{

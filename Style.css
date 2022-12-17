@@ -299,7 +299,7 @@ width: 100%;
     display: grid;
     width: 80%;
     margin: auto;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(5,1fr);
     background-color: whitesmoke;
 
 }
@@ -352,4 +352,7 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px
     cursor: pointer;
     color: #A0CD4A;
     background-color: whitesmoke;
+}
+@media only screen and (max-width: 300px) {
+
 }
