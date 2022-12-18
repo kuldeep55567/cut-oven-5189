@@ -60,6 +60,7 @@ form input[type="text"] {
 	padding: 0.5rem 0.7rem;
 	margin-left: 5px;
 	font-size: 20px;
+	width: 100%;
 }
 
 input[type="submit"] {
@@ -81,7 +82,7 @@ input[type="submit"]:hover {
 }
 
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 600px) {
 	.container {
 		flex-direction: column;
 	}
@@ -103,7 +104,7 @@ input[type="submit"]:hover {
 
 #cart-container {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	margin-left:auto;
 	width: 50%;
 }
@@ -138,4 +139,35 @@ span {
 	margin-top: 30px;
 	margin-left: 30px;
 	color: #2c3e50;
+}
+/* For Mobile Media Queries */
+@media screen and (max-width:400px){
+	#cart-container{
+		grid-template-columns: repeat(1,1fr);
+		border: 3px solid salmon;
+		width: 100%;
+	}
+	.container{
+		position: absolute;
+		top: 1550px;
+		width: 100%;
+	}
+}
+@media screen and (min-width:401px) and (max-width:935px){
+.headt{
+	font-size: 20px;
+}
+.container{
+ position: absolute;
+ top:920px;
+margin-left: 400px;
+margin: auto;
+
+}
+
+#cart-container{
+	position: absolute;
+	grid-template-columns: repeat(4,1fr);
+}
+
 }

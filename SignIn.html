@@ -10,15 +10,66 @@
          body{
             background-image:url("indian-condiments-with-copy-space-view.jpg") ;
         }
+        .popup{
+    width: 400px;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px ;
+    color: rgb(73, 71, 71);
+    visibility:hidden ;
+    font-size: 20px;
+    transition: transform 0.4s,top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top:50%;
+    transform: translate(-50%,-50%) scale(1);
+
+}
+.popup img{
+    width: 100px;
+    /* margin-top: -px; */
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) ;
+}
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+
+}
+.popup button{
+    width: 100%;
+    margin-top:50px;
+    padding: 10px 0;
+    background:#6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) ;
+}
     </style>
 </head>
 <body>
+        <div class="popup" id="popup">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV79NbfU_NYYVoEGV5t7_GAO8VE5BnN8jwNQ&usqp=CAU" alt="">
+        <h2>Thank You !</h2>
+        <p>Thank You For Logging In to Big-Basket!Have a Good Day😊</p>
+        <button type="button" onclick="closepopup()">OK</button>
+        </div>
     <div id="parent">
         <img src="https://www.pngkit.com/png/full/506-5063855_10-increase-in-push-notification-delivery-rate-big.png" alt="">
     </div>
     <div id="container">
     <main>
-        <h2>Log In User..</h2>
+        <h2 style="color: whitesmoke;">Log In User..</h2>
         <form role="form" onsubmit="signIn(event);" autocomplete="off">
             <div class="form-group">
                 <input type="email" name="email" id="email" placeholder="Email Address" required>
@@ -27,7 +78,7 @@
                 <input type="password" name="pwd" id="pwd" placeholder="Password" required>
             </div>
             <div class="form-group">
-                <button type="submit">Sign In</button>
+                <button type="submit" onclick="openpopup()">Sign In</button>
             </div>
         </form>
         <p>Don't have an account? <a href="/signup.html">Sign Up</a> here</p>

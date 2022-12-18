@@ -35,8 +35,13 @@ function signIn(e) {
         alert("Incorrect login credentials");
     }
     else{
-        location.href = "HomePage.html";
-        
+            popup.classList.add("open-popup")
     }
     e.preventDefault();
 }
+let popup = document.getElementById("popup");  
+        function closepopup(){
+            popup.classList.remove("open-popup")
+            location.href = "index.html";
+        }
+

@@ -36,12 +36,13 @@
 #head p {
     padding-inline: 15px;
     color: #4a4a4a;
+    font-size:20px;
 }
 #head :hover{
     color: #A0CD4A;
     cursor: pointer;
 }
-
+#more {display: none;}
 #head p i {
     color: #4a4a4a;
     ;
@@ -73,7 +74,6 @@ nav {
     background-color: rgb(224, 218, 218);
     text-align: center;
     margin-top: 30px;
-
 
 }
 
@@ -348,11 +348,69 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px
     margin-top: 30px;
     
 }
+#footbtn button:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: #A0CD4A;
+}
 .footbtn:hover{
     cursor: pointer;
     color: #A0CD4A;
     background-color: whitesmoke;
 }
-@media only screen and (max-width: 300px) {
-
+@media screen and (min-width:401px) and (max-width: 935px) {
+#searchbar{
+    width: 200px;
+}
+#scontainer{
+    grid-template-columns: repeat(3,1fr);
+   }
+}
+@media screen and (max-width: 400px) {
+   #searchbar{
+    width: 100px;
+   }
+   #search{
+    position: relative;
+    top: 30px;
+   }
+   .options{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+   }
+   .options img{
+    width: 100%;
+   }
+   .bank,.topoffer,.fruits,.snacks,.household,.beverages,.beauty,.brand,.staples{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   }
+   .about{
+    display: none;
+   }
+   .basket span p{
+    display: none;
+   }
+   #cart-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    position: absolute;
+   }
+   #scontainer{
+    grid-template-columns: repeat(2,1fr);
+   }
+   #total{
+    visibility: hidden;
+   }
+   .basket i{
+    display: none;
+   }
+   #cart-total{
+    position: relative;
+    top: 0px;
+   }
+#parent1{
+    display: block;
+}
 }

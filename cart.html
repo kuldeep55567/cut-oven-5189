@@ -25,7 +25,7 @@
           </div>
           <nav>
             <img src="https://pristineorganics.com/wp-content/uploads/2019/06/bigbasket-logo-png-300x200.png" alt="" style="width: 150px;">
-            <h1 id="total" class="headt">Your Payable Amout is:- ₹ <span id="cart-total">0</span></h1>
+            <h1 id="total" class="headt">Your Payable Amount is:- ₹ <span id="cart-total">0</span></h1>
           </nav>
           </div>
     </div>
@@ -69,7 +69,7 @@
                 <h3>PAYMENT</h3>
                 <form>
                     Accepted Card <br>
-                    <img src="https://p.kindpng.com/picc/s/35-351793_credit-or-debit-card-mastercard-logo-visa-card.png" width="500">
+                    <img src="https://p.kindpng.com/picc/s/35-351793_credit-or-debit-card-mastercard-logo-visa-card.png" width="100%">
             
                     <br><br>
     
@@ -99,7 +99,7 @@
             </div>
         </div>
     </div>
-    <p style="color:black; background-color: rgb(240, 228, 215); padding-left: 100px; margin-top: 40px;">Copyright © 2022-2033 Masai Grocery Supplies Pvt Ltd</p>
+    <p style="color:black; background-color: rgb(240, 228, 215); padding-left: 100px; margin-top: 40px; position: fixed;bottom: 0px;">Copyright © 2022-2033 Masai Grocery Supplies Pvt Ltd</p>
 </body>
 <script>
      let container = document.getElementById("cart-container");
@@ -153,5 +153,11 @@ remove.addEventListener("click",()=>{
       container.append(card);
     });
   }
+  let formData = JSON.parse(localStorage.getItem('formData')) || []
+formData.forEach((element)=>{
+  let ename = document.getElementById("hname");
+  ename.innerText ="Hello ," + element.fname;
+  ename.style.marginTop = "5px"
+})
 </script>
 </html>

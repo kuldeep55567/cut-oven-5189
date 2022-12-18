@@ -29,7 +29,7 @@
                 class="fa-solid fa-magnifying-glass"></i></button>
     </div>
     <div class="basket">
-        <a href="cart.html"><i class="fa-solid fa-basket-shopping"></i>
+        <a href="cart.html"  style="text-decoration: none;"><i class="fa-solid fa-basket-shopping"></i>
             <p>My Basket</p>
             <span id="cart-total">0
                  </span></a>
@@ -344,6 +344,12 @@ alert("Product Added To Cart");
 total.innerText = cartData.length;
 }
 
+})
+let formData = JSON.parse(localStorage.getItem('formData')) || []
+formData.forEach((element)=>{
+  let ename = document.getElementById("hname");
+  ename.innerText ="Hello ," + element.fname;
+  ename.style.marginTop = "5px"
 })
         card.append(image,name,price,button);
         container.append(card);
